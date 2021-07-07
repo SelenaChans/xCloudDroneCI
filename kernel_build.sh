@@ -4,20 +4,20 @@
 #
 
 # Needed Secret Variable
-# KERNEL_NAME | Your kernel name
-# KERNEL_SOURCE | Your kernel link source
-# KERNEL_BRANCH  | Your needed kernel branch if needed with -b. eg -b eleven_eas
-# DEVICE_CODENAME | Your device codename
-# DEVICE_DEFCONFIG | Your device defconfig eg. lavender_defconfig
-# ANYKERNEL | Your Anykernel link repository
-# TG_TOKEN | Your telegram bot token
-# TG_CHAT_ID | Your telegram private ci chat id
-# BUILD_USER | Your username
-# BUILD_HOST | Your hostname
+# KERNEL_NAME | Project-1001 Goa
+# KERNEL_SOURCE | https://github.com/rasenss/kernel_xiaomi_ginkgo
+# KERNEL_BRANCH  | R
+# DEVICE_CODENAME | ginkgo
+# DEVICE_DEFCONFIG | vendor/ginkgo-perf_defconfig
+# ANYKERNEL | https://github.com/rasenss/AnyKernel3-1
+# TG_TOKEN | 1361533397:AAE52C9FMo88L5yzNe8GibV2jra2_WRdp7I
+# TG_CHAT_ID | -502738116
+# BUILD_USER | Razs
+# BUILD_HOST | Coop
 
 echo "Downloading few Dependecies . . ."
 # Kernel Sources
-git clone --depth=1 $KERNEL_SOURCE $KERNEL_BRANCH $DEVICE_CODENAME
+git clone --depth=1 $KERNEL_SOURCE $KERNEL_BRANCH vendor/$DEVICE_CODENAME
 git clone --depth=1 https://github.com/xyz-prjkt/xRageTC_build xRageTC # xRageTC set as Clang Default
 
 # Main Declaration
